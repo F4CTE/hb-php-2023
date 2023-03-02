@@ -9,9 +9,18 @@ function sum(int $x, int $y): int
 // et retournera le même texte encadré par des balises p
 // transformToParagraph
 // textToParagraph
-function textToParagraph(string $text): string
+function textToParagraphOrDiv(string $text, string $tagName = "p"): string
 {
-    return "<p>$text</p>";
+    $allowedTags = ['p', 'div'];
+
+    if (!in_array($tagName, $allowedTags)) {
+        exit('La balise ' . $tagName . ' est interdite, balises autorisées : ' . implode(',', $allowedTags));
+    }
+
+    $openingTag = '<' . $tagName . '>';
+    $closingTag = '</' . $tagName . '>';
+
+    return $openingTag . $text . $closingTag;
 }
 
 // Fonction qui prend des textes
