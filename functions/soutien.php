@@ -14,9 +14,8 @@ $text = "Je suis un texte";
 $thirdSentence = "Je suis une troisième phrase";
 $eniemeSentence = "Je suis une énième";
 
-$sentences = [$sentence, $autreSentence, $eniemeSentence];
+$texts = [$sentence, $autreSentence, $eniemeSentence];
 
-echo textToParagraphOrDiv(
-    combineTextsWithBrTags(...$sentences),
-    "section"
-);
+$textWithBr = combineTextsWithBrTags(...$texts);
+
+echo textToParagraphOrDiv($textWithBr, 'div');
