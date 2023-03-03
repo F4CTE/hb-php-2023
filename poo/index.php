@@ -50,3 +50,6 @@ echo $product->getPriceTTC() . "€<br />";
 
 $product->setName('PlayStation');
 echo $product->getName();
+
+$productBis = new Product(1000);
+echo $productBis->getPriceTTC() . "€<br />";
