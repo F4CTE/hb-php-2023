@@ -14,7 +14,7 @@ $text = "Je suis un texte";
 $thirdSentence = "Je suis une troisième phrase";
 $eniemeSentence = "Je suis une énième";
 
-$sentences = [$sentence, $autreSentence, $eniemeSentence];
+$texts = [$sentence, $autreSentence, $eniemeSentence];
 
 $textWithBr = combineTextsWithBrTags(...$texts);
 
